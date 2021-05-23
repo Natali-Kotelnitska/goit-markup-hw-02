@@ -19,7 +19,6 @@
   --primary-black-color: #000000;
   --primary-white-color: #ffffff;
   --address-link-color: rgba(255, 255, 255, 0.6);
-  --main-bgr-color: #fff;
   --hero-footer-bgr-color: #2f303a;
   --button-bgr-color: #f5f4fa;
   --stroke-header-line: #ececec;
@@ -30,7 +29,7 @@
 }
 
 body {
-  background-color: var(--main-bgr-color);
+  background-color: var(--primary-white-color);
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
@@ -43,7 +42,8 @@ body {
 
 /* Logo */
 .logo {
-  font-family: Raleway;
+  color: var(--accent-color);
+  font-family: Raleway, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
@@ -52,10 +52,9 @@ body {
   text-decoration: none;
 }
 .logo:hover,
-.logo:focus {
-  color: var(--accent-color);
-}
-.logo-accent {
+.logo:focus,
+.logo-header:hover,
+.logo-header:focus {
   color: var(--accent-color);
 }
 .logo-header {
@@ -117,7 +116,7 @@ body {
 .button {
   color: var(--title-text-color);
   background-color: var(--button-bgr-color);
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-size: 16px;
   border-radius: 4px;
   cursor: pointer;
@@ -142,6 +141,19 @@ body {
 }
 
 /* СЕКЦИЯ ПРЕИМУЩЕСТВА */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .section-title {
   color: var(--title-text-color);
   letter-spacing: 0.03em;
@@ -184,6 +196,10 @@ body {
 .logo-footer {
   color: var(--primary-white-color);
 }
+.logo-footer:hover,
+.logo-footer:focus {
+  color: var(--accent-color);
+}
 
 .address {
   font-style: inherit;
@@ -218,6 +234,9 @@ body {
 }
 
 /* Portfolio Cards */
+.cards a {
+  text-decoration: none;
+}
 .card-title {
   color: var(--title-text-color);
   font-size: 18px;
@@ -227,4 +246,5 @@ body {
 .cards .description {
   font-size: 16px;
   line-height: 1.87;
+  color: var(--primary-text-color);
 }
